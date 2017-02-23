@@ -1,0 +1,941 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>통합 검색</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+</head>
+<body>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <a href="index.html" class="logo"><strong>SEOUL HOT</strong> <span>by 잠못자는사람들</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="history/history.html">History</a></li>
+            <li><a href="landing.html">Department</a></li>
+            <li><a href="gallery/gallery index.html">Gallery</a></li>
+            <li><a href="elements.html">Contact</a></li>
+        </ul>
+        <ul class="actions vertical">
+            <li><a href="signup.html" class="button fit">Sign Up</a></li>
+            <li><a href="login.html" class="button fit">Log In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <!-- Note: The "styleN" class below should match that of the header element. -->
+    <section id="banner" class="style2">
+        <div class="inner">
+							<span class="image">
+								<img src="images/pic07.jp" alt=""/>
+							</span>
+            <header class="major">
+                <h1>통합 검색</h1>
+            </header>
+            <div class="content">
+                <h4 onClick="show_line('line1')">1호선</h4>
+                <h4 onClick="show_line('line2')">2호선</h4>
+                <h4 onClick="show_line('line3')">3호선</h4>
+                <h4 onClick="show_line('line4')">4호선</h4>
+                <h4 onClick="show_line('line5')">5호선</h4>
+                <h4 onClick="show_line('line6')">6호선</h4>
+                <h4 onClick="show_line('line7')">7호선</h4>
+                <h4 onClick="show_line('line8')">8호선</h4>
+            </div>
+            호선을 클릭해주세요
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One -->
+        <section id="line1" style="display:none">
+            <div class="inner">
+                <header class="major">
+                    <h2>1호선</h2>
+                </header>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='서울역'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='시청'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='종각'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='종로3가'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='종로5가'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='동대문'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신설동'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='제기동'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='청량리(지하)'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='동묘앞'/>
+                <t/>
+            </div>
+        </section>
+
+        <!-- Two -->
+        <section id="line2" style="display:none">
+            <div class="inner">
+                <header class="major">
+                    <h2>2호선</h2>
+                </header>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='을지로입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='을지로3가'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='을지로4가'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='동대문역사문화공원'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신당'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='상왕십리'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='왕십리'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='한양대'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='뚝섬'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='성수'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='건대입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='구의'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='강변'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='잠실나루'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='잠실'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신천'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='종합운동장'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='삼성'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='선릉'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='역삼'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='강남'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='교대'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='서초'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='방배'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='사당'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='낙성대'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='서울대입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='봉천'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신림'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신대방'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='구로디지털단지'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='대림'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신도림'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='문래'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='영등포구청'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='당산'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='합정'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='홍대입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신촌'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='이대'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='아현'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='충정로'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='용답'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신답'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신설동'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='도림천'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='양천구청'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신정네거리'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='용두'/>
+                <t/>
+            </div>
+        </section>
+        <section id="line3" style="display:none">
+            <div class="inner">
+                <header class="major">
+                    <h2>3호</h2>
+                </header>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='지축'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='구파발'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='연신내'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='불광'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='녹번'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='홍제'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='무악재'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='독립문'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='경복궁'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='안국'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='종로3가'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='동대입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='약수'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='금호'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='옥수'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='압구정'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신사'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='잠원'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='고속터미널'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='교대'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='남부터미널'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='양재'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='매봉'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='도곡'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='대치'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='학여울'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='대청'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='일원'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='수서'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='가락시장'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='경찰병원'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='오금'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='충무로'/>
+                <t/>
+            </div>
+        </section>
+        <section id="line4" style="display:none">
+            <div class="inner">
+                <header class="major">
+                    <h2>4호선</h2>
+                </header>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='당고개'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='상계'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='노원'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='창동'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='쌍문'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='수유(강북구청)'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='미아'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='미아사거리'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='길음'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='성신여대입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='한성대입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='혜화'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='명동'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='회현'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='숙대입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='삼각지'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신용산'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='이촌'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='동작'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='총신대입구'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='사당'/>
+                <t/>
+
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='남태령'/>
+                <t/>
+            </div>
+        </section>
+        <section id="line5" style="display:none">
+            <div class="inner">
+                <header class="major">
+                    <h2>5호선</h2>
+                </header>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='강동'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='개롱'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='개화산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='거여'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='고덕'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='공덕'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='광나루'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='광화문'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='군자'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='굽은다리'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='길동'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='김포공항'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='까치산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='답십리'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='동대문역사문화공원'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='둔촌동'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='마곡'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='마장'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='마천'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='마포'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='명일'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='목동'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='발산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='방이'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='방화'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='상일동'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='서대문'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='송정'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신금호'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신길'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신정'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='아차산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='애오개'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='양평'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='여의나루'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='여의도'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='영등포구청'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='영등포시장'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='오금'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='오목교'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='올림픽공원'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='왕십리'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='우장산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='을지로4가'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='장한평'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='종로3가'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='천호'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='청구'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='충정로'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='행당'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='화곡'/>
+                <t/>
+            </div>
+        </section>
+        <section id="line6" style="display:none">
+            <div class="inner">
+                <header class="major">
+                    <h2>6호선</h2>
+                </header>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='고려대'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='공덕'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='광흥창'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='구산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='녹사평'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='대흥'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='독바위'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='돌곶이'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='동묘앞'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='디지털미디어시티'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='마포구청'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='망원'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='버티고개'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='보문'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='봉화산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='불광'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='삼각지'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='상수'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='상월곡'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='새절'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='석계'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신당'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='안암'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='약수'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='역촌'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='연신내'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='월곡'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='월드컵경기장'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='응암'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='이태원'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='증산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='창신'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='청구'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='태릉입구'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='한강진'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='합정'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='화랑대'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='효창공원앞'/>
+                <t/>
+            </div>
+        </section>
+        <section id="line7" style="display:none">
+            <div class="inner">
+                <header class="major">
+                    <h2>7호선</h2>
+                </header>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='가산디지털단지'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='강남구청'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='건대입구'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='고속터미널'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='공릉'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='광명사거리'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='군자'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='굴포천'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='까치울'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='남구로'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='남성'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='내방'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='노원'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='논현'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='대림'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='도봉산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='마들'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='먹골'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='면목'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='반포'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='보라매'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='부천시청'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='부천종합운동장'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='부평구청'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='사가정'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='삼산체육관'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='상도'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='상동'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='상봉'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='수락산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='숭실대입구'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신대방삼거리'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신중동'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신풍'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='어린이대공원'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='온수'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='용마산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='장승배기'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='장암'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='중계'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='중곡'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='중화'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='천왕'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='철산'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='청담'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='총신대입구'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='춘의'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='태릉입구'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='하계'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='학동'/>
+                <t/>
+            </div>
+        </section>
+        <section id="line8" style="display:none">
+            <div class="inner">
+                <header class="major">
+                    <h2>8호선</h2>
+                </header>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='가락시장'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='강동구청'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='남한산성입구'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='단대오거리'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='모란'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='몽촌토성'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='문정'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='복정'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='산성'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='석촌'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='송파'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='수진'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='신흥'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='암사'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='잠실'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='장지'/>
+                <t/>
+                <input type='button' name='check' onClick="radio_checked(this.value)" value='천호'/>
+                <t/>
+            </div>
+        </section>
+        <section>
+            <div class="inner">
+                <form name="search">
+                    <div>
+                        역 이름 검색 :
+                        <input type="text" name="input_text" size="20" placeholder="빈 칸: 전체역 검색" onChange="">
+                        <input type="button" value="역 이름으로 검색" onClick="search_station(document.search.input_text.value)">
+                    </div>
+                    <br>
+                    <div>
+                        <select name="from_month" onClick="select_from_month()">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>월
+                        <select name="from_day" value=1>
+                        </select>일 <br>~
+                        <select name="to_month" onClick="select_to_month()">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>월
+                        <select name="to_day" value=1>
+                        </select>일
+                        <br>
+                        <input type="button" value="역 이름, 날짜로 검색"
+                               onClick="search_date(document.search.input_text.value, document.search.from_month.value,document.search.from_day.value, document.search.to_month.value, document.search.to_day.value)">
+                    </div>
+                </form>
+
+            </div>
+            </section>
+    </div>
+</div>
+
+<script language="Javascript">
+    <!--
+    function show_line(div_name) {
+        var obj = document.getElementById('line1');
+        obj.style.display = "none";
+        var obj = document.getElementById('line2');
+        obj.style.display = "none";
+        var obj = document.getElementById('line3');
+        obj.style.display = "none";
+        var obj = document.getElementById('line4');
+        obj.style.display = "none";
+        var obj = document.getElementById('line5');
+        obj.style.display = "none";
+        var obj = document.getElementById('line6');
+        obj.style.display = "none";
+        var obj = document.getElementById('line7');
+        obj.style.display = "none";
+        var obj = document.getElementById('line8');
+        obj.style.display = "none";
+
+        obj = document.getElementById(div_name);
+        obj.style.display = "block";
+    }
+
+    function radio_checked(name) {
+        document.search.input_text.value = name;
+    }
+
+    function compare_station(station_name) {
+//매개변수 String을 kibana에 query (역들 간 비교페이지) format: (value) or (value) or ....
+        if (!station_name) station_name = "*";
+        let date = new Date();
+        let address = "http://52.79.129.249:5601/app/kibana#/dashboard/5ef74320-e9c9-11e6-8533-03a0eed8e2d4?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:'2014-" + date.getMonth() + "-" + (date.getDate() - 1) + "T20:00:00.000',mode:absolute,to:'2014-" + date.getMonth() + "-" + date.getDate() + "T15:00:00.000'))&_a=(filters:!(),options:(darkTheme:!f),panels:!((col:1,id:%2761d86e40-e9c2-11e6-8533-03a0eed8e2d4%27,panelIndex:1,row:1,size_x:3,size_y:4,type:visualization),(col:4,id:fc53c190-e9c7-11e6-8533-03a0eed8e2d4,panelIndex:2,row:1,size_x:9,size_y:3,type:visualization),(col:4,id:%276c0a3c80-e9c8-11e6-8533-03a0eed8e2d4%27,panelIndex:3,row:4,size_x:4,size_y:2,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'" + station_name + "')),title:%27%EC%84%A0%ED%83%9D%20%EC%97%AD%20%EA%B0%84%20%EB%B9%84%EA%B5%90%27,uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))"
+
+        console.log(station_name);
+        location.href = address;
+    }
+
+    function search_station(station_name) {
+//매개변수 String을 kibana에 query
+        if (!station_name) station_name = "*";
+        let date = new Date();
+        let address = "http://52.79.129.249:5601/app/kibana#/dashboard/4711c420-e9c3-11e6-8533-03a0eed8e2d4?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:'2014-" + date.getMonth() + "-" + (date.getDate() - 1) + "T20:00:00.000',mode:absolute,to:'2014-" + date.getMonth() + "-" + date.getDate() + "T15:00:00.000'))&_a=(filters:!(),options:(darkTheme:!f),panels:!((col:7,id:%273e739bf0-e9c2-11e6-8533-03a0eed8e2d4%27,panelIndex:1,row:7,size_x:6,size_y:4,type:visualization),(col:9,id:ddb6c9d0-e9c2-11e6-8533-03a0eed8e2d4,panelIndex:2,row:1,size_x:4,size_y:4,type:visualization),(col:1,id:%2712b94dc0-e9c2-11e6-8533-03a0eed8e2d4%27,panelIndex:3,row:3,size_x:8,size_y:2,type:visualization),(col:1,id:%270f124950-e9c3-11e6-8533-03a0eed8e2d4%27,panelIndex:4,row:5,size_x:8,size_y:2,type:visualization),(col:1,id:%2761d86e40-e9c2-11e6-8533-03a0eed8e2d4%27,panelIndex:5,row:7,size_x:6,size_y:5,type:visualization),(col:6,id:%272b967000-e9c4-11e6-8533-03a0eed8e2d4%27,panelIndex:6,row:1,size_x:3,size_y:2,type:visualization),(col:1,id:%2704c4bc10-e9c5-11e6-8533-03a0eed8e2d4%27,panelIndex:7,row:1,size_x:5,size_y:2,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'" + station_name + "')),title:%27%EC%84%9C%EC%9A%B8%20%EC%A7%80%ED%95%98%EC%B2%A0%20%EB%8D%B0%EC%9D%B4%ED%84%B0%27,uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),P-2:(vis:(legendOpen:!f)),P-3:(vis:(legendOpen:!f)),P-4:(vis:(legendOpen:!f)),P-5:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))"
+
+        console.log(station_name);
+        location.href = address;
+    }
+
+
+    function search_date(station_name, from_month, from_day, to_month, to_day) {
+//매개변수로 역 이름, 시각을 받아서 kibana에서 검색
+        let from = "2014-" + from_month + "-" + (from_day - 1) + " 20:00";
+        let to = "2014-" + to_month + "-" + to_day + " 15:00";
+        if (!station_name) station_name = "'*'"
+        if (from > to) {
+            window.alert("날짜를 잘못 입력하셨습니다.")
+            return;
+        }
+        let address = "http://52.79.129.249:5601/app/kibana#/dashboard/4711c420-e9c3-11e6-8533-03a0eed8e2d4?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:'" + from + "',mode:absolute,to:'" + to + "'))&_a=(filters:!(),options:(darkTheme:!f),panels:!((col:7,id:%273e739bf0-e9c2-11e6-8533-03a0eed8e2d4%27,panelIndex:1,row:7,size_x:6,size_y:4,type:visualization),(col:9,id:ddb6c9d0-e9c2-11e6-8533-03a0eed8e2d4,panelIndex:2,row:1,size_x:4,size_y:4,type:visualization),(col:1,id:%2712b94dc0-e9c2-11e6-8533-03a0eed8e2d4%27,panelIndex:3,row:3,size_x:8,size_y:2,type:visualization),(col:1,id:%270f124950-e9c3-11e6-8533-03a0eed8e2d4%27,panelIndex:4,row:5,size_x:8,size_y:2,type:visualization),(col:1,id:%2761d86e40-e9c2-11e6-8533-03a0eed8e2d4%27,panelIndex:5,row:7,size_x:6,size_y:5,type:visualization),(col:6,id:%272b967000-e9c4-11e6-8533-03a0eed8e2d4%27,panelIndex:6,row:1,size_x:3,size_y:2,type:visualization),(col:1,id:%2704c4bc10-e9c5-11e6-8533-03a0eed8e2d4%27,panelIndex:7,row:1,size_x:5,size_y:2,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'" + station_name + "')),title:%27%EC%84%9C%EC%9A%B8%20%EC%A7%80%ED%95%98%EC%B2%A0%20%EB%8D%B0%EC%9D%B4%ED%84%B0%27,uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n)))),P-2:(vis:(legendOpen:!f)),P-3:(vis:(legendOpen:!f)),P-4:(vis:(legendOpen:!f)),P-5:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))"
+        location.href = address;
+    }
+
+    function select_from_month() {
+        document.search.from_day.options.length = 1;
+        month_day = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
+        for (i = 0; i < 12; i++) {
+            if (document.search.from_month[i].selected) {
+                print_day = month_day[i];
+                break;
+            }
+        }
+        for (i = 0; i < print_day; i++) {
+            j = i + 1;
+            new_option = new Option(j, j);
+            document.search.from_day.options[i] = new_option;
+        }
+    }
+
+    function select_to_month() {
+        document.search.to_day.options.length = 1;
+        month_day = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+
+        for (i = 0; i < 12; i++) {
+            if (document.search.to_month[i].selected) {
+                print_day = month_day[i];
+                break;
+            }
+        }
+        for (i = 0; i < print_day; i++) {
+            j = i + 1;
+            new_option = new Option(j, j);
+            document.search.to_day.options[i] = new_option;
+        }
+    }
+
+
+    select_from_month();
+    select_to_month();
+
+
+    //-->
+</script>
+</body>
+</html>

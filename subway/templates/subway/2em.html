@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load compute %}
+        <!--bs 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>현재 혼잡 순위</title>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="../">So Hot! Seoul Hot Ple</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="../"></a>
+                    </li>
+              <li class="hidden">
+                        <a class="page-scroll" href="../"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../1bz">핫플 순위</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../2em">콜플 순위</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../3my">여긴 핫플?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../4vs">핫플 비교</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../5cm">통근/통학</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../6fd">이달의 불금</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../chat">핫플 채팅</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../search">핫플 검색</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+       <br>
+    <br>
+    <br>
+   <br>
+
+    <div align="center">
+    <div class="jumbotron">
+        <br>
+  <h2>{{ now }}</h2>
+</div>
+{% for sts in blist %}
+    {% if forloop.counter < 11%}
+{% ifequal forloop.counter 1 %}
+     <div class="panel panel-primary">
+                      {% else %}
+  <div class="panel panel-info">
+  {% endifequal %}
+    <div class="panel-heading">{{ forloop.counter }}위</div>
+
+
+
+<div class="panel-body">
+    {% for st in sts %}
+        {%  ifequal forloop.counter 3 %}
+            {{ st }}
+        {% endifequal %}
+        {%  ifequal forloop.counter 4 %}
+            <h4>{{ st }}</h4>
+        {% endifequal %}
+        {%  ifequal forloop.counter time %}
+            <h3>{{ st }}명</h3> (현재 일 중 {{ st|percent:sts.28 }}%)
+                        <div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow={{ st|percent:sts.28 }}   aria-valuemin="0" aria-valuemax="100" style="width: {{ st|percent:sts.28 }}%">
+    <span class="sr-only">현재 일 중 {{ st|percent:sts.28 }} %</span>
+  </div>
+</div>
+        {% endifequal %}
+        {%  ifequal forloop.counter 29%}
+            당일 누적 {{ st }}명
+            <br>
+        {% endifequal %}
+    {% endfor %}
+</div>
+  </div>
+        </div>
+    {% endif %}
+{% endfor %}
+    </div>
+</body>
+</html>

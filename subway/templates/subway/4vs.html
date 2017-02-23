@@ -1,0 +1,258 @@
+
+<meta charset="utf-8"/>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<title>핫플 검색기</title>
+    <script language="javascript">
+        //버튼클릭시 javascript 호출합니다.
+        function javascript() 
+        {
+             //check이름을 가진 check중에서 체크된 것만 값 가져오기
+             var size = document.getElementsByName("check").length;
+             for(var i = 0; i < size; i++) 
+             {
+                        if(document.getElementsByName("check")[i].checked == true) 
+                        {
+                            var divTest = document.getElementById("result");
+                            divTest.innerHTML = (document.getElementsByName("check")[i].value);
+                     }
+                }
+        }
+        function test1()
+        {
+            var chk = document.getElementsByName("check"); // 체크박스객체를 담는다
+            var len = chk.length;    //체크박스의 전체 개수
+            var checkRow = '';      //체크된 체크박스의 value를 담기위한 변수
+            var checkCnt = 0;        //체크된 체크박스의 개수
+            var checkLast = '';      //체크된 체크박스 중 마지막 체크박스의 인덱스를 담기위한 변수
+            var rowid = '';             //체크된 체크박스의 모든 value 값을 담는다
+            var cnt = 0;                 
+            for(var i=0; i<len; i++) {
+                if(chk[i].checked == true) {
+                    checkCnt++;        //체크된 체크박스의 개수
+                    checkLast = i;     //체크된 체크박스의 인덱스
+                }
+            } 
+            for(var i=0; i<len; i++) {
+                if(chk[i].checked == true) {  //체크가 되어있는 값 구분
+                    
+                    checkRow = chk[i].value;
+                
+                    if(checkCnt == 1) {                            //체크된 체크박스의 개수가 한 개 일때,
+                        rowid += checkRow;        //'value'의 형태 (뒤에 ,(콤마)가 붙지않게)
+                    } 
+                    else {                                            //체크된 체크박스의 개수가 여러 개 일때,
+                        if(i == checkLast) {                     //체크된 체크박스 중 마지막 체크박스일 때,
+                            rowid += checkRow;  //'value'의 형태 (뒤에 ,(콤마)가 붙지않게)
+                        } 
+                        else {
+                            rowid += checkRow;   //'value',의 형태 (뒤에 ,(콤마)가 붙게)                  
+                        }
+                    
+                    }
+                    
+                    cnt++;
+                    checkRow = '';    //checkRow초기화.
+            }
+            var divTest = document.getElementById("result");
+            divTest.innerHTML = rowid;    //'value1', 'value2', 'value3' 의 형태로 출력된다.
+        }
+    }
+</script>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="../">So Hot! Seoul Hot Ple</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                              <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../1bz">핫플 순위</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../2em">콜플 순위</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../3my">여긴 핫플?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../4vs">핫플 비교</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../5cm">통근/통학</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../6fd">이달의 불금</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../chat">핫플 채팅</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../search">핫플 검색</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+       <br>
+    <br>
+    <br>
+   <br>
+<body>
+<h1>1호선</h1>
+<form method="post"> {%  csrf_token %}
+<input type='checkbox' name='check' value='서울역'/>서울역<br/>
+<input type='checkbox' name='check' value='시청'/>시청<br/>
+<input type='checkbox' name='check' value='종각'/>종각<br/>
+<input type='checkbox' name='check' value='종로3가'/>종로3가<br/>
+<input type='checkbox' name='check' value='종로5가'/>종로5가<br/>
+<input type='checkbox' name='check' value='동대문'/>동대문<br/>
+<input type='checkbox' name='check' value='신설동'/>신설동<br/>
+<input type='checkbox' name='check' value='제기동'/>제기동<br/>
+<input type='checkbox' name='check' value='청량리(지하)'/>청량리(지하)<br/>
+<input type='checkbox' name='check' value='동묘앞'/>동묘앞<br/>
+<h1>2호선</h1>
+<input type='checkbox' name='check' value='을지로입구'/>을지로입구<br/>
+<input type='checkbox' name='check' value='을지로3가'/>을지로3가<br/>
+<input type='checkbox' name='check' value='을지로4가'/>을지로4가<br/>
+<input type='checkbox' name='check' value='동대문역사문화공원'/>동대문역사문화공원<br/>
+<input type='checkbox' name='check' value='신당'/>신당<br/>
+<input type='checkbox' name='check' value='상왕십리'/>상왕십리<br/>
+<input type='checkbox' name='check' value='왕십리'/>왕십리<br/>
+<input type='checkbox' name='check' value='한양대'/>한양대<br/>
+<input type='checkbox' name='check' value='뚝섬'/>뚝섬<br/>
+<input type='checkbox' name='check' value='성수'/>성수<br/>
+<input type='checkbox' name='check' value='건대입구'/> 건대입구<br/>
+<input type='checkbox' name='check' value='구의'/> 구의<br/>
+<input type='checkbox' name='check' value='강변'/> 강변<br/>
+<input type='checkbox' name='check' value='잠실나루'/> 잠실나루<br/>
+<input type='checkbox' name='check' value='잠실'/> 잠실<br/>
+<input type='checkbox' name='check' value='신천'/> 신천<br/>
+<input type='checkbox' name='check' value='종합운동장'/> 종합운동장<br/>
+<input type='checkbox' name='check' value='삼성'/> 삼성<br/>
+<input type='checkbox' name='check' value='선릉'/> 선릉<br/>
+<input type='checkbox' name='check' value='역삼'/> 역삼<br/>
+<input type='checkbox' name='check' value='강남'/> 강남<br/>
+<input type='checkbox' name='check' value='교대'/> 교대<br/>
+<input type='checkbox' name='check' value='서초'/> 서초<br/>
+<input type='checkbox' name='check' value='방배'/> 방배<br/>
+<input type='checkbox' name='check' value='사당'/> 사당<br/>
+<input type='checkbox' name='check' value='낙성대'/> 낙성대<br/>
+<input type='checkbox' name='check' value='서울대입구'/> 서울대입구<br/>
+<input type='checkbox' name='check' value='봉천'/> 봉천<br/>
+<input type='checkbox' name='check' value='신림'/> 신림<br/>
+<input type='checkbox' name='check' value='신대방'/> 신대방<br/>
+<input type='checkbox' name='check' value='구로디지털단지'/> 구로디지털단지<br/>
+<input type='checkbox' name='check' value='대림'/> 대림<br/>
+<input type='checkbox' name='check' value='신도림'/> 신도림<br/>
+<input type='checkbox' name='check' value='문래'/> 문래<br/>
+<input type='checkbox' name='check' value='영등포구청'/>영등포구청<br/>
+<input type='checkbox' name='check' value='당산'/>당산<br/>
+<input type='checkbox' name='check' value='합정'/>합정<br/>
+<input type='checkbox' name='check' value='홍대입구'/>홍대입구<br/>
+<input type='checkbox' name='check' value='신촌'/>신촌<br/>
+<input type='checkbox' name='check' value='이대'/>이대<br/>
+<input type='checkbox' name='check' value='아현'/>아현<br/>
+<input type='checkbox' name='check' value='충정로'/>충정로<br/>
+<input type='checkbox' name='check' value='용답'/>용답<br/>
+<input type='checkbox' name='check' value='신답'/>신답<br/>
+<input type='checkbox' name='check' value='신설동'/>신설동<br/>
+<input type='checkbox' name='check' value='도림천'/>도림천<br/>
+<input type='checkbox' name='check' value='양천구청'/>양천구청<br/>
+<input type='checkbox' name='check' value='신정네거리'/>신정네거리<br/>
+<input type='checkbox' name='check' value='용두'/>용두<br/>
+<h1>3호선</h1>
+<input type='checkbox' name='check' value='지축'/>지축<br/>
+<input type='checkbox' name='check' value='구파발'/>구파발<br/>
+<input type='checkbox' name='check' value='연신내'/>연신내<br/>
+<input type='checkbox' name='check' value='불광'/>불광<br/>
+<input type='checkbox' name='check' value='녹번'/>녹번<br/>
+<input type='checkbox' name='check' value='홍제'/>홍제<br/>
+<input type='checkbox' name='check' value='무악재'/>무악재<br/>
+<input type='checkbox' name='check' value='독립문'/>독립문<br/>
+<input type='checkbox' name='check' value='경복궁'/>경복궁<br/>
+<input type='checkbox' name='check' value='안국'/>안국<br/>
+<input type='checkbox' name='check' value='종로3가'/>종로3가<br/>
+<input type='checkbox' name='check' value='동대입구'/>동대입구<br/>
+<input type='checkbox' name='check' value='약수'/>약수<br/>
+<input type='checkbox' name='check' value='금호'/>금호<br/>
+<input type='checkbox' name='check' value='옥수'/>옥수<br/>
+<input type='checkbox' name='check' value='압구정'/>압구정<br/>
+<input type='checkbox' name='check' value='신사'/>신사<br/>
+<input type='checkbox' name='check' value='잠원'/>잠원<br/>
+<input type='checkbox' name='check' value='고속터미널'/>고속터미널<br/>
+<input type='checkbox' name='check' value='교대'/>교대<br/>
+<input type='checkbox' name='check' value='남부터미널'/>남부터미널<br/>
+<input type='checkbox' name='check' value='양재'/>양재<br/>
+<input type='checkbox' name='check' value='매봉'/>매봉<br/>
+<input type='checkbox' name='check' value='도곡'/>도곡<br/>
+<input type='checkbox' name='check' value='대치'/>대치<br/>
+<input type='checkbox' name='check' value='학여울'/>학여울<br/>
+<input type='checkbox' name='check' value='대청'/>대청<br/>
+<input type='checkbox' name='check' value='일원'/>일원<br/>
+<input type='checkbox' name='check' value='수서'/>수서<br/>
+<input type='checkbox' name='check' value='가락시장'/>가락시장<br/>
+<input type='checkbox' name='check' value='경찰병원'/>경찰병원<br/>
+<input type='checkbox' name='check' value='오금'/>오금<br/>
+<input type='checkbox' name='check' value='충무로'/>충무로<br/>
+<h1>4호선</h1>
+<input type='checkbox' name='check' value='당고개'/>당고개<br/>
+<input type='checkbox' name='check' value='상계'/>상계<br/>
+<input type='checkbox' name='check' value='노원'/>노원<br/>
+<input type='checkbox' name='check' value='창동'/>창동<br/>
+<input type='checkbox' name='check' value='쌍문'/>쌍문<br/>
+<input type='checkbox' name='check' value='수유(강북구청)'/>수유(강북구청)<br/>
+<input type='checkbox' name='check' value='미아'/>미아<br/>
+<input type='checkbox' name='check' value='미아사거리'/>미아사거리<br/>
+<input type='checkbox' name='check' value='길음'/>길음<br/>
+<input type='checkbox' name='check' value='성신여대입구'/>성신여대입구<br/>
+<input type='checkbox' name='check' value='한성대입구'/>한성대입구<br/>
+<input type='checkbox' name='check' value='혜화'/>혜화<br/>
+<input type='checkbox' name='check' value='명동'/>명동<br/>
+<input type='checkbox' name='check' value='회현'/>회현<br/>
+<input type='checkbox' name='check' value='숙대입구'/>숙대입구<br/>
+<input type='checkbox' name='check' value='삼각지'/>삼각지<br/>
+<input type='checkbox' name='check' value='신용산'/>신용산<br/>
+<input type='checkbox' name='check' value='이촌'/>이촌<br/>
+<input type='checkbox' name='check' value='동작'/>동작<br/>
+<input type='checkbox' name='check' value='총신대입구'/>총신대입구<br/>
+<input type='checkbox' name='check' value='사당'/>사당<br/>
+<input type='checkbox' name='check' value='남태령'/>남태령<br/>
+<input type='submit' onclick='test1()' value='검색'/>
+<div id="result"></div>
+    </form>
+</body>
+</html>

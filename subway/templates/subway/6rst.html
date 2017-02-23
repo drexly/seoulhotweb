@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<title>{{ mth }},불타는 {{ dday }}</title>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+{{ sortrst }}
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="../">So Hot! Seoul Hot Ple</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                                <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../1bz">핫플 순위</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../2em">콜플 순위</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../3my">여긴 핫플?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../4vs">핫플 비교</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../5cm">통근/통학</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../6fd">이달의 불금</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../chat">핫플 채팅</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../search">핫플 검색</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+       <br>
+    <br>
+    <br>
+   <br>
+<div align="center">
+    <div class="jumbotron" align="center">
+        <br>
+  <h2>{{ yr }}년 현재</h2><h2> {{ mth }}</h2><h2>{{ name }}의 불타는 {{ dday }}요일 순위 </h2>
+    </div><br><br>
+<br><br>
+        {% for sts in dat%}
+    {% if forloop.counter < 11%}
+{% ifequal forloop.counter 1 %}
+     <div class="panel panel-primary">
+                      {% else %}
+  <div class="panel panel-info">
+  {% endifequal %}
+    <div class="panel-heading">{{ forloop.counter }}위 {{ dday }}!</div>
+
+
+
+<div class="panel-body">
+
+<h4>{{ sts.0 }}일: {{ sts.1 }}명</h4>
+
+</div>
+  </div>
+        </div>
+    {% endif %}
+{% endfor %}
+
+</div>

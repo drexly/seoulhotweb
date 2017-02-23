@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        {% load compute %}
+
+    <meta charset="UTF-8">
+    <title>{{ context.2 }}핫플 비교 결과</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="../">So Hot! Seoul Hot Ple</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                               <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../1bz">핫플 순위</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../2em">콜플 순위</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../3my">여긴 핫플?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../4vs">핫플 비교</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../5cm">통근/통학</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../6fd">이달의 불금</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="../chat">핫플 채팅</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../search">핫플 검색</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+       <br>
+    <br>
+    <br>
+   <br>
+<div align="center">
+    <div class="jumbotron" align="center">
+        <br>
+  <h2>{{ now.0 }} ,{{ now.1 }} 현재</h2>
+</div>
+{% for sts in context%}
+    {% if forloop.counter < 11%}
+{% ifequal forloop.counter 1 %}
+     <div class="panel panel-primary">
+                      {% else %}
+  <div class="panel panel-info">
+  {% endifequal %}
+    <div class="panel-heading">{{ sts.0 }}</div>
+
+
+
+<div class="panel-body">
+
+<h4>{{ sts.1 }} {{ sts.2 }} 현 인원 {{ sts.3 }}명</h4>
+<h5>금일 누적인원 {{ sts.4 }}명 대비 현 인원 혼잡도 {{ sts.5 }}%</h5>
+<div class="progress">
+  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow={{ sts.5 }}   aria-valuemin="0" aria-valuemax="100" style="width:{{ sts.5 }}%">
+    <span class="sr-only">현재 일 중 {{ sts.5 }} %</span>
+  </div>
+</div>
+</div>
+  </div>
+        </div>
+    {% endif %}
+{% endfor %}
+    </div>
+    <script type="text/javascript" >
+        
+    var station_name="{{qq}}";
+    if (!station_name) station_name = "*";
+    var date = new Date();
+    var from = "2014-" + (date.getMonth()+1) + "-" + date.getDate() + " 05:00";
+    var to = "2014-" + (date.getMonth()+1) + "-" + date.getDate() + " 24:00";
+    var address = "http://52.79.129.249:5601/app/kibana#/dashboard/5ef74320-e9c9-11e6-8533-03a0eed8e2d4?_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:'" + from + "',mode:absolute,to:'" + to + "'))&_a=(filters:!(),options:(darkTheme:!f),panels:!((col:1,id:%2761d86e40-e9c2-11e6-8533-03a0eed8e2d4%27,panelIndex:1,row:1,size_x:3,size_y:4,type:visualization),(col:4,id:fc53c190-e9c7-11e6-8533-03a0eed8e2d4,panelIndex:2,row:1,size_x:9,size_y:3,type:visualization),(col:4,id:%276c0a3c80-e9c8-11e6-8533-03a0eed8e2d4%27,panelIndex:3,row:4,size_x:4,size_y:2,type:visualization)),query:(query_string:(analyze_wildcard:!t,query:'" + station_name + "')),title:%27%EC%84%A0%ED%83%9D%20%EC%97%AD%20%EA%B0%84%20%EB%B9%84%EA%B5%90%27,uiState:(P-1:(vis:(params:(sort:(columnIndex:!n,direction:!n))))))"
+    window.open(address,"_blank");
+    </script>
+</body>
+</html>

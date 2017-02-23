@@ -1,0 +1,132 @@
+{% extends "subway/base.html" %}
+
+		<!-- Wrapper -->
+
+		{% block body %}
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>Seoul Hot</h1>
+							</header>
+							<div class="content">
+								<p>Never <br />
+								sleep</p>
+								<ul class="actions">
+									<li><a href="#two" class="button next scrolly">Get Started</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+							<section id="forum">
+								<div class="inner">
+									<header class="forum">
+										<center><h3>Hot place now</h3></center>
+									</header>
+
+
+									<div class="box">
+									<h1>
+										 {{station.station}}
+									</h1>
+									</div>
+								</div>
+							</section>
+
+				<!-- Main -->
+					<div id="main">
+
+
+
+
+
+						<!-- One -->
+							<section id="two" class="tiles">
+								<article>
+									<span class="image">
+										<img src="images/icon/history.jp" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url "subway:1bz" %}" class="link">핫 플레이스</a></h3>
+										<p>이시각 지하철 복잡도 순위</p>
+										<p>1위부터 10위까지</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/icon/department.jp" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'subway:2em'%}" class="link">한산지역순</a></h3>
+										<p>Department of Noveler</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/icon/gallery.jp" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'subway:3my'%}" class="link">지금 내 지하철</a></h3>
+										<p>Our photo is here</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/icon/contact.jp" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'subway:4vs' %}" class="link">지역 vs 지역</a></h3>
+										<p>Contact of Noveler</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'subway:5vs'%}" class="link">통학 통근</a></h3>
+										<p>미정</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'subway:6fd'%}" class="link">이달의 불금</a></h3>
+										<p>미정</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'subway:chat'%}" class="link">핫플 채팅</a></h3>
+										<p>미정</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic06.jpg" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'subway:search'%}" class="link">통합검색</a></h3>
+										<p>미정</p>
+									</header>
+								</article>
+							</section>
+
+
+					</div>
+
+				<!-- Contact -->
+
+
+				<!-- Footer -->
+
+			</div>
+		{% endblock %}
+		<!-- Scripts -->

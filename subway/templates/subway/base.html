@@ -1,0 +1,80 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{% static "subway/css/main.css" %}" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		{% block head %}{% endblock %}
+
+		<style>
+		#forum{
+		background-color: #2a2f4a;
+		text-align: center;
+		align-items: center;
+		}
+		</style>
+  </head>
+
+
+  <body>
+    <div id="wrapper">
+
+      <!-- Header -->
+        <header id="header" class="alt">
+          <a href="{% url "subway:index" %}" class="logo"><strong>Seoul Hot</strong> <span>by 잠못자는사람들</span></a>
+          <nav>
+            <a href="#menu">Menu</a>
+          </nav>
+        </header>
+
+      <!-- Menu -->
+        <nav id="menu">
+          <ul class="links">
+            <li><a href="{% url 'subway:1bz' %}">핫플 순위</a></li>
+            <li><a href="{% url 'subway:2em' %}">콜플 순위</a></li>
+            <li><a href="{% url 'subway:3my' %}">여긴 핫플?</a></li>
+            <li><a href="{% url 'subway:4vs' %}">핫플 비교</a></li>
+            <li><a href="{% url 'subway:5vs' %}">통근 / 통학</a></li>
+            <li><a href="{% url 'subway:6fd' %}">이달의 불금</a></li>
+            <li><a href="{% url 'subway:chat' %}">핫플 채팅</a></li>
+            <li><a href="{% url 'subway:search' %}">핫플 검색</a></li>
+            
+          </ul>
+        </nav>
+    {% block body %}
+    {% endblock %}
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+          <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Untitled</li>
+          <li>Design: <a href="index.html">NOVELER</a></li>
+
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+
+  <script src="{% static "subway/js/jquery.min.js" %}"></script>
+  <script src="{% static "subway/js/jquery.scrolly.min.js" %}"></script>
+  <script src="{% static "subway/js/jquery.scrollex.min.js" %}"></script>
+  <script src="{% static "subway/js/skel.min.js" %}"></script>
+  <script src="{% static "subway/js/util.js" %}"></script>
+  <!--[if lte IE 8]><script src="subway/js/ie/respond.min.js"></script><![endif]-->
+  <script src="{% static "subway/js/main.js" %}"></script>
+
+</html>
