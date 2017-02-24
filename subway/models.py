@@ -7,7 +7,11 @@ ON_OFF = (
     ('off', '하차'),
     )
 
+class dbModel(models.Model):
+    record = models.CharField(max_length=100,)
 
+    def __str__(self):
+        return self.record
 class SubwayModelQuerset(models.query.QuerySet):
     pass
 

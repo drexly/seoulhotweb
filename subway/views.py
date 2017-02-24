@@ -6,13 +6,16 @@ from django.db.models import Q
 
 #from datetime import datetime
 import datetime
-from .models import SubwayModel
+from .models import SubwayModel,dbModel
 
 import codecs
 import operator
 # Create your views here.
 from urllib.request import urlopen
-
+qs=dbModel.objects.all()
+f=[]
+for a in qs:
+    f.append(str(a))
 
 
 def SubwayLV(request):
@@ -254,13 +257,7 @@ def bsbusy(request):
     daytmp = str(datetime.datetime.now()).split(' ')
     date = daytmp[0][5:10]
     time = int(daytmp[1][0:2])
-    #f = codecs.open('2014.txt', 'r', encoding='euc-kr')
-    html = urlopen("http://seoulhot.pythonanywhere.com/db/2014")
-    content = html.read().decode('utf-8')
-    raw = content.split("\n")
-    f = []
-    for a in raw:
-        f.append(str(a).replace("\ufeff", ''))
+
     dayString = ['월', '화', '수', '목', '금', '토', '일']
     todaylist = []
     '''
@@ -318,13 +315,7 @@ def bsempty(request):
     daytmp = str(datetime.datetime.now()).split(' ')
     date = daytmp[0][5:10]
     time = int(daytmp[1][0:2])
-    #f = codecs.open('2014.txt', 'r', encoding='euc-kr')
-    html = urlopen("http://seoulhot.pythonanywhere.com/db/2014")
-    content = html.read().decode('utf-8')
-    raw = content.split("\n")
-    f = []
-    for a in raw:
-        f.append(str(a).replace("\ufeff", ''))
+
     dayString = ['월', '화', '수', '목', '금', '토', '일']
     todaylist = []
     '''
@@ -390,13 +381,7 @@ def bsmy(request):
         name = checked_value[0]
         #########################
 
-        #f = codecs.open('2014.txt', 'r', encoding='euc-kr')
-        html = urlopen("http://seoulhot.pythonanywhere.com/db/2014")
-        content = html.read().decode('utf-8')
-        raw = content.split("\n")
-        f = []
-        for a in raw:
-            f.append(str(a).replace("\ufeff", ''))
+
         dayString = ['월', '화', '수', '목', '금', '토', '일']
         todaylist = []
         '''
@@ -448,8 +433,6 @@ def bsmy(request):
         return render(request, 'subway/3rst.html', {'context': context})
     return render(request, 'subway/3my.html', {'context': checked_value})
 
-def source(request):
-    return render(request, 'subway/2014.txt')
 
 def bsvs(request):
     checked_value = request.POST.getlist('check')
@@ -467,13 +450,7 @@ def bsvs(request):
             qq+=nm
             if ii < len(names)-1:
                 qq+=' or '
-        ##f = codecs.open('2014.txt', 'r', encoding='euc-kr')
-        html = urlopen("http://seoulhot.pythonanywhere.com/db/2014")
-        content = html.read().decode('utf-8')
-        raw = content.split("\n")
-        f = []
-        for a in raw:
-            f.append(str(a).replace("\ufeff", ''))
+
 
         dayString = ['월', '화', '수', '목', '금', '토', '일']
         todaylist = []
@@ -543,13 +520,6 @@ def bscm(request):
         name = checked_value[0]
         #########################
 
-        #f = codecs.open('2014.txt', 'r', encoding='euc-kr')
-        html = urlopen("http://seoulhot.pythonanywhere.com/db/2014")
-        content = html.read().decode('utf-8')
-        raw = content.split("\n")
-        f = []
-        for a in raw:
-            f.append(str(a).replace("\ufeff", ''))
         dayString = ['월', '화', '수', '목', '금', '토', '일']
         todaylist = []
         '''
@@ -636,13 +606,7 @@ def bsfd(request):
         dday = checked_val[0]
         #########################
 
-        #f = codecs.open('2014.txt', 'r', encoding='euc-kr')
-        html = urlopen("http://seoulhot.pythonanywhere.com/db/2014")
-        content = html.read().decode('utf-8')
-        raw = content.split("\n")
-        f = []
-        for a in raw:
-            f.append(str(a).replace("\ufeff", ''))
+
         dayString = ['월', '화', '수', '목', '금', '토', '일']
         todaylist = []
         '''

@@ -4,7 +4,11 @@ import codecs
 import datetime
 import os
 from seoulhotver2.settings import BASE_DIR
-from .models import SubwayModel
+from .models import SubwayModel,dbModel
+qs=dbModel.objects.all()
+f=[]
+for a in qs:
+    f.append(str(a))
 
 
 def container():
@@ -13,7 +17,6 @@ def container():
     time=int(daytmp[1][0:2])
     # print date
     # print time
-    f = codecs.open(os.path.join(BASE_DIR, '2014.txt'), 'r', encoding='euc-kr')
     #print f
     for i in f:
         i = i.split()

@@ -20,5 +20,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'subway/', include('subway.urls')),
     url(r'^$', include('subway.urls')),
-    url(r'^db/', include('subway.urls')),
 ]
