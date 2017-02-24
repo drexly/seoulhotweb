@@ -196,9 +196,11 @@ def main(request):
         if eval(values) > biggest:
             biggest = eval(values)
             small_pk = query.id
-    qs = qs.get(id=small_pk)
-    if qs.station is None:
+    if now.hour>1 or now.hour<5:
         qs.station='미집계 시간입니다'
+    else:
+        qs = qs.get(id=small_pk)
+
 
     context = {"station" : qs}
 
