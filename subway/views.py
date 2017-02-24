@@ -197,6 +197,8 @@ def main(request):
             biggest = eval(values)
             small_pk = query.id
     qs = qs.get(id=small_pk)
+    if qs.station is None:
+        qs.station='미집계 시간입니다'
 
     context = {"station" : qs}
 
